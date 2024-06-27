@@ -270,11 +270,11 @@ class TikTok {
   }
   partiallyEditProduct(id, productData) {
     return __awaiter(this, void 0, void 0, function* () {
-      const { error } =
-        schemas_1.productPartailEditSchema.validate(productData);
-      if (error) {
-        throw new Error(`Invalid product data: ${error.details[0].message}`);
-      }
+      // const { error } =
+      //   schemas_1.productPartailEditSchema.validate(productData);
+      // if (error) {
+      //   throw new Error(`Invalid product data: ${error.details[0].message}`);
+      // }
       const { url, headers, data } = this.generateRequestSign(
         `/product/${VERSION}/products/${id}/partial_edit`,
         productData
