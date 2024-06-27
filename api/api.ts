@@ -284,10 +284,10 @@ class TikTok {
   }
 
   async partiallyEditProduct(id: string, productData: ProductPartialEdit) {
-    const { error } = productPartailEditSchema.validate(productData);
-    if (error) {
-      throw new Error(`Invalid product data: ${error.details[0].message}`);
-    }
+    // const { error } = productPartailEditSchema.validate(productData);
+    // if (error) {
+    //   throw new Error(`Invalid product data: ${error.details[0].message}`);
+    // }
 
     const { url, headers, data } = this.generateRequestSign(
       `/product/${VERSION}/products/${id}/partial_edit`,
